@@ -1,4 +1,9 @@
 #pragma once
+#include "_3DShape.h"
+#include "Конус.h"
+#include "Параллелепипед.h"
+#include "Пирамида.h"
+#include "Цилиндр.h"
 
 namespace ooplaba4cpp {
 

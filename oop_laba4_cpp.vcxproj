@@ -81,6 +81,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -119,11 +121,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="_3DShape.cpp" />
+    <ClCompile Include="Конус.cpp" />
+    <ClCompile Include="Параллелепипед.cpp" />
+    <ClCompile Include="Пирамида.cpp" />
+    <ClCompile Include="Цилиндр.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="_3DShape.h" />
+    <ClInclude Include="Конус.h" />
+    <ClInclude Include="Параллелепипед.h" />
+    <ClInclude Include="Пирамида.h" />
+    <ClInclude Include="Цилиндр.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
