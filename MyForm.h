@@ -101,6 +101,15 @@ namespace ooplaba4cpp {
 	private: System::Windows::Forms::RadioButton^ radioButton1;
 	private: System::Windows::Forms::TextBox^ textBox9;
 	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::GroupBox^ groupBox7;
+	private: System::Windows::Forms::TextBox^ textBox10;
+	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::Button^ button7;
+	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::TextBox^ textBox11;
+	private: System::Windows::Forms::RadioButton^ radioButton7;
+	private: System::Windows::Forms::RadioButton^ radioButton6;
+	private: System::Windows::Forms::RadioButton^ radioButton5;
 
 
 	protected:
@@ -155,13 +164,22 @@ namespace ooplaba4cpp {
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
-			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->groupBox7 = (gcnew System::Windows::Forms::GroupBox());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->radioButton7 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton6 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton5 = (gcnew System::Windows::Forms::RadioButton());
+			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->label14 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
@@ -169,6 +187,7 @@ namespace ooplaba4cpp {
 			this->groupBox4->SuspendLayout();
 			this->groupBox5->SuspendLayout();
 			this->groupBox6->SuspendLayout();
+			this->groupBox7->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// dataGridView1
@@ -523,6 +542,58 @@ namespace ooplaba4cpp {
 			this->groupBox6->TabStop = false;
 			this->groupBox6->Text = L"Смена типа";
 			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(211, 19);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(75, 23);
+			this->button6->TabIndex = 15;
+			this->button6->Text = L"Изменить";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			// 
+			// radioButton4
+			// 
+			this->radioButton4->AutoSize = true;
+			this->radioButton4->Location = System::Drawing::Point(6, 94);
+			this->radioButton4->Name = L"radioButton4";
+			this->radioButton4->Size = System::Drawing::Size(77, 17);
+			this->radioButton4->TabIndex = 15;
+			this->radioButton4->Text = L"Пирамида";
+			this->radioButton4->UseVisualStyleBackColor = true;
+			// 
+			// radioButton3
+			// 
+			this->radioButton3->AutoSize = true;
+			this->radioButton3->Location = System::Drawing::Point(6, 76);
+			this->radioButton3->Name = L"radioButton3";
+			this->radioButton3->Size = System::Drawing::Size(55, 17);
+			this->radioButton3->TabIndex = 14;
+			this->radioButton3->Text = L"Конус";
+			this->radioButton3->UseVisualStyleBackColor = true;
+			// 
+			// radioButton2
+			// 
+			this->radioButton2->AutoSize = true;
+			this->radioButton2->Location = System::Drawing::Point(6, 58);
+			this->radioButton2->Name = L"radioButton2";
+			this->radioButton2->Size = System::Drawing::Size(69, 17);
+			this->radioButton2->TabIndex = 13;
+			this->radioButton2->Text = L"Цилиндр";
+			this->radioButton2->UseVisualStyleBackColor = true;
+			// 
+			// radioButton1
+			// 
+			this->radioButton1->AutoSize = true;
+			this->radioButton1->Checked = true;
+			this->radioButton1->Location = System::Drawing::Point(6, 40);
+			this->radioButton1->Name = L"radioButton1";
+			this->radioButton1->Size = System::Drawing::Size(111, 17);
+			this->radioButton1->TabIndex = 12;
+			this->radioButton1->TabStop = true;
+			this->radioButton1->Text = L"Параллелепипед";
+			this->radioButton1->UseVisualStyleBackColor = true;
+			// 
 			// textBox9
 			// 
 			this->textBox9->Location = System::Drawing::Point(53, 14);
@@ -540,63 +611,107 @@ namespace ooplaba4cpp {
 			this->label13->TabIndex = 10;
 			this->label13->Text = L"Номер: ";
 			// 
-			// radioButton1
+			// groupBox7
 			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->Checked = true;
-			this->radioButton1->Location = System::Drawing::Point(6, 40);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(111, 17);
-			this->radioButton1->TabIndex = 12;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Параллелепипед";
-			this->radioButton1->UseVisualStyleBackColor = true;
+			this->groupBox7->Controls->Add(this->label15);
+			this->groupBox7->Controls->Add(this->textBox11);
+			this->groupBox7->Controls->Add(this->radioButton7);
+			this->groupBox7->Controls->Add(this->radioButton6);
+			this->groupBox7->Controls->Add(this->radioButton5);
+			this->groupBox7->Controls->Add(this->button7);
+			this->groupBox7->Controls->Add(this->textBox10);
+			this->groupBox7->Controls->Add(this->label14);
+			this->groupBox7->Location = System::Drawing::Point(910, 12);
+			this->groupBox7->Name = L"groupBox7";
+			this->groupBox7->Size = System::Drawing::Size(407, 140);
+			this->groupBox7->TabIndex = 17;
+			this->groupBox7->TabStop = false;
+			this->groupBox7->Text = L"Изменение параметров";
 			// 
-			// radioButton2
+			// label15
 			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(6, 58);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(69, 17);
-			this->radioButton2->TabIndex = 13;
-			this->radioButton2->Text = L"Цилиндр";
-			this->radioButton2->UseVisualStyleBackColor = true;
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(106, 63);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(58, 13);
+			this->label15->TabIndex = 22;
+			this->label15->Text = L"Значение:";
 			// 
-			// radioButton3
+			// textBox11
 			// 
-			this->radioButton3->AutoSize = true;
-			this->radioButton3->Location = System::Drawing::Point(6, 76);
-			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(55, 17);
-			this->radioButton3->TabIndex = 14;
-			this->radioButton3->Text = L"Конус";
-			this->radioButton3->UseVisualStyleBackColor = true;
+			this->textBox11->Location = System::Drawing::Point(166, 60);
+			this->textBox11->Name = L"textBox11";
+			this->textBox11->Size = System::Drawing::Size(51, 20);
+			this->textBox11->TabIndex = 21;
 			// 
-			// radioButton4
+			// radioButton7
 			// 
-			this->radioButton4->AutoSize = true;
-			this->radioButton4->Location = System::Drawing::Point(6, 94);
-			this->radioButton4->Name = L"radioButton4";
-			this->radioButton4->Size = System::Drawing::Size(77, 17);
-			this->radioButton4->TabIndex = 15;
-			this->radioButton4->Text = L"Пирамида";
-			this->radioButton4->UseVisualStyleBackColor = true;
+			this->radioButton7->AutoSize = true;
+			this->radioButton7->Location = System::Drawing::Point(6, 81);
+			this->radioButton7->Name = L"radioButton7";
+			this->radioButton7->Size = System::Drawing::Size(64, 17);
+			this->radioButton7->TabIndex = 20;
+			this->radioButton7->TabStop = true;
+			this->radioButton7->Text = L"Ширина";
+			this->radioButton7->UseVisualStyleBackColor = true;
 			// 
-			// button6
+			// radioButton6
 			// 
-			this->button6->Location = System::Drawing::Point(211, 19);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(75, 23);
-			this->button6->TabIndex = 15;
-			this->button6->Text = L"Изменить";
-			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			this->radioButton6->AutoSize = true;
+			this->radioButton6->Checked = true;
+			this->radioButton6->Location = System::Drawing::Point(6, 63);
+			this->radioButton6->Name = L"radioButton6";
+			this->radioButton6->Size = System::Drawing::Size(63, 17);
+			this->radioButton6->TabIndex = 19;
+			this->radioButton6->TabStop = true;
+			this->radioButton6->Text = L"Высота";
+			this->radioButton6->UseVisualStyleBackColor = true;
+			// 
+			// radioButton5
+			// 
+			this->radioButton5->AutoSize = true;
+			this->radioButton5->Location = System::Drawing::Point(6, 45);
+			this->radioButton5->Name = L"radioButton5";
+			this->radioButton5->Size = System::Drawing::Size(58, 17);
+			this->radioButton5->TabIndex = 18;
+			this->radioButton5->TabStop = true;
+			this->radioButton5->Text = L"Длина";
+			this->radioButton5->UseVisualStyleBackColor = true;
+			// 
+			// button7
+			// 
+			this->button7->Location = System::Drawing::Point(326, 17);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(75, 23);
+			this->button7->TabIndex = 16;
+			this->button7->Text = L"Изменить";
+			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
+			// 
+			// textBox10
+			// 
+			this->textBox10->Location = System::Drawing::Point(52, 19);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(43, 20);
+			this->textBox10->TabIndex = 17;
+			this->textBox10->Text = L"0";
+			this->textBox10->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox10_TextChanged);
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(6, 21);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(47, 13);
+			this->label14->TabIndex = 16;
+			this->label14->Text = L"Номер: ";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1329, 563);
+			this->Controls->Add(this->groupBox7);
 			this->Controls->Add(this->groupBox6);
 			this->Controls->Add(this->groupBox5);
 			this->Controls->Add(this->groupBox4);
@@ -605,7 +720,7 @@ namespace ooplaba4cpp {
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->dataGridView1);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Бажин Дмитрий, ООП Лаба 4";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
@@ -619,6 +734,8 @@ namespace ooplaba4cpp {
 			this->groupBox5->PerformLayout();
 			this->groupBox6->ResumeLayout(false);
 			this->groupBox6->PerformLayout();
+			this->groupBox7->ResumeLayout(false);
+			this->groupBox7->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -722,6 +839,39 @@ namespace ooplaba4cpp {
 		}
 		if (radioButton4->Checked) {
 			МассивФигур[i] = new Пирамида(tmp1, tmp2, tmp3);
+		}
+		UpdateGrid();
+	}
+	private: System::Void textBox10_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		String^ ttt = textBox10->Text;
+		if (ttt == "") { ttt = "0"; }
+		int i = Convert::ToInt32(ttt);
+		if (i < 0) { i = 0; textBox10->Text = "0"; }
+		if (i > КоличествоЭлементов - 1) { i = 0; textBox10->Text = "0"; }
+		String^ type = Marshal::PtrToStringAnsi((IntPtr)(char*)МассивФигур[i]->Тип());
+		if (type == "Параллелепипед" || type == "Пирамида") {
+			radioButton5->Visible = true;
+		}
+		else {
+			radioButton5->Visible = false;
+			if (!radioButton7->Checked) {
+				radioButton6->Checked = true;
+			}
+		}
+	}
+	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+		double newParam = Convert::ToDouble(textBox11->Text);
+		int i = Convert::ToInt32(textBox10->Text);
+		if (newParam < 0) { newParam = -newParam; }
+		if (newParam == 0) { newParam = 1; }
+		if (radioButton5->Checked) {
+			МассивФигур[i]->ЗадатьДлину(newParam);
+		}
+		if (radioButton6->Checked) {
+			МассивФигур[i]->ЗадатьВысоту(newParam);
+		}
+		if (radioButton7->Checked) {
+			МассивФигур[i]->ЗадатьШирину(newParam);
 		}
 		UpdateGrid();
 	}
