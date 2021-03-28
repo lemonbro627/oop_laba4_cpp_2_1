@@ -1,14 +1,14 @@
 #pragma once
 #include "_3DShape.h"
-class Пирамида :
+class РџРёСЂР°РјРёРґР° :
 	public _3DShape
 {
 public:
-	Пирамида();
-	Пирамида(float Длина, float Ширина, float Высота);
-	float Объём();
-	float Площадь();
-	const char* Тип();
+	РџРёСЂР°РјРёРґР°();
+	РџРёСЂР°РјРёРґР°(float Р”Р»РёРЅР°, float РЁРёСЂРёРЅР°, float Р’С‹СЃРѕС‚Р°);
+	float РћР±СЉС‘Рј();
+	float РџР»РѕС‰Р°РґСЊ();
+	const char* РўРёРї();
 	void operator*=(float k);
 };
 

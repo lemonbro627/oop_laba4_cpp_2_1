@@ -1,21 +1,21 @@
 #pragma once
 #include "_3DShape.h"
-#include "Конус.h"
-#include "Параллелепипед.h"
-#include "Пирамида.h"
-#include "Цилиндр.h"
+#include "РљРѕРЅСѓСЃ.h"
+#include "РџР°СЂР°Р»Р»РµР»РµРїРёРїРµРґ.h"
+#include "РџРёСЂР°РјРёРґР°.h"
+#include "Р¦РёР»РёРЅРґСЂ.h"
 #include <cstdlib>
 #include <string>
 
-float мойРандом() {
+float РјРѕР№Р Р°РЅРґРѕРј() {
 	return float(rand() % 10000) / 100.0;
 }
 
-int КоличествоЭлементов;
-int элемент, элемент1, элемент2, номерФигуры, параметр;
-float tmpДлина, tmpШирина, tmpВысота, вводПараметра;
-_3DShape** МассивФигур;
-_3DShape** новыйМассивФигур;
+int РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ;
+int СЌР»РµРјРµРЅС‚, СЌР»РµРјРµРЅС‚1, СЌР»РµРјРµРЅС‚2, РЅРѕРјРµСЂР¤РёРіСѓСЂС‹, РїР°СЂР°РјРµС‚СЂ;
+float tmpР”Р»РёРЅР°, tmpРЁРёСЂРёРЅР°, tmpР’С‹СЃРѕС‚Р°, РІРІРѕРґРџР°СЂР°РјРµС‚СЂР°;
+_3DShape** РњР°СЃСЃРёРІР¤РёРіСѓСЂ;
+_3DShape** РЅРѕРІС‹Р№РњР°СЃСЃРёРІР¤РёРіСѓСЂ;
 
 namespace ooplaba4cpp {
 
@@ -28,7 +28,7 @@ namespace ooplaba4cpp {
 	using namespace System::Runtime::InteropServices;
 
 	/// <summary>
-	/// Сводка для MyForm
+	/// РЎРІРѕРґРєР° РґР»СЏ MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -37,13 +37,13 @@ namespace ooplaba4cpp {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~MyForm()
 		{
@@ -55,17 +55,17 @@ namespace ooplaba4cpp {
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 
 
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Длин;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Р”Р»РёРЅ;
 
 
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Номер;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Тип;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Длина;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Высота;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Ширина;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ РќРѕРјРµСЂ;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ РўРёРї;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Р”Р»РёРЅР°;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Р’С‹СЃРѕС‚Р°;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ РЁРёСЂРёРЅР°;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label3;
@@ -116,23 +116,23 @@ namespace ooplaba4cpp {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->Номер = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Тип = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Длина = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Высота = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Ширина = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->РќРѕРјРµСЂ = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->РўРёРї = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Р”Р»РёРЅР° = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Р’С‹СЃРѕС‚Р° = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->РЁРёСЂРёРЅР° = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -194,8 +194,8 @@ namespace ooplaba4cpp {
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
-				this->Номер,
-					this->Тип, this->Длина, this->Высота, this->Ширина
+				this->РќРѕРјРµСЂ,
+					this->РўРёРї, this->Р”Р»РёРЅР°, this->Р’С‹СЃРѕС‚Р°, this->РЁРёСЂРёРЅР°
 			});
 			this->dataGridView1->Location = System::Drawing::Point(12, 12);
 			this->dataGridView1->Name = L"dataGridView1";
@@ -203,42 +203,42 @@ namespace ooplaba4cpp {
 			this->dataGridView1->TabIndex = 0;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
 			// 
-			// Номер
+			// РќРѕРјРµСЂ
 			// 
-			this->Номер->HeaderText = L"Номер";
-			this->Номер->Name = L"Номер";
-			this->Номер->ReadOnly = true;
-			this->Номер->Resizable = System::Windows::Forms::DataGridViewTriState::False;
-			this->Номер->Width = 45;
+			this->РќРѕРјРµСЂ->HeaderText = L"РќРѕРјРµСЂ";
+			this->РќРѕРјРµСЂ->Name = L"РќРѕРјРµСЂ";
+			this->РќРѕРјРµСЂ->ReadOnly = true;
+			this->РќРѕРјРµСЂ->Resizable = System::Windows::Forms::DataGridViewTriState::False;
+			this->РќРѕРјРµСЂ->Width = 45;
 			// 
-			// Тип
+			// РўРёРї
 			// 
-			this->Тип->HeaderText = L"Тип";
-			this->Тип->Name = L"Тип";
-			this->Тип->ReadOnly = true;
-			this->Тип->Resizable = System::Windows::Forms::DataGridViewTriState::True;
-			this->Тип->Width = 200;
+			this->РўРёРї->HeaderText = L"РўРёРї";
+			this->РўРёРї->Name = L"РўРёРї";
+			this->РўРёРї->ReadOnly = true;
+			this->РўРёРї->Resizable = System::Windows::Forms::DataGridViewTriState::True;
+			this->РўРёРї->Width = 200;
 			// 
-			// Длина
+			// Р”Р»РёРЅР°
 			// 
-			this->Длина->HeaderText = L"Длина";
-			this->Длина->Name = L"Длина";
-			this->Длина->ReadOnly = true;
-			this->Длина->Resizable = System::Windows::Forms::DataGridViewTriState::False;
+			this->Р”Р»РёРЅР°->HeaderText = L"Р”Р»РёРЅР°";
+			this->Р”Р»РёРЅР°->Name = L"Р”Р»РёРЅР°";
+			this->Р”Р»РёРЅР°->ReadOnly = true;
+			this->Р”Р»РёРЅР°->Resizable = System::Windows::Forms::DataGridViewTriState::False;
 			// 
-			// Высота
+			// Р’С‹СЃРѕС‚Р°
 			// 
-			this->Высота->HeaderText = L"Высота";
-			this->Высота->Name = L"Высота";
-			this->Высота->ReadOnly = true;
-			this->Высота->Resizable = System::Windows::Forms::DataGridViewTriState::False;
+			this->Р’С‹СЃРѕС‚Р°->HeaderText = L"Р’С‹СЃРѕС‚Р°";
+			this->Р’С‹СЃРѕС‚Р°->Name = L"Р’С‹СЃРѕС‚Р°";
+			this->Р’С‹СЃРѕС‚Р°->ReadOnly = true;
+			this->Р’С‹СЃРѕС‚Р°->Resizable = System::Windows::Forms::DataGridViewTriState::False;
 			// 
-			// Ширина
+			// РЁРёСЂРёРЅР°
 			// 
-			this->Ширина->HeaderText = L"Ширина";
-			this->Ширина->Name = L"Ширина";
-			this->Ширина->ReadOnly = true;
-			this->Ширина->Resizable = System::Windows::Forms::DataGridViewTriState::False;
+			this->РЁРёСЂРёРЅР°->HeaderText = L"РЁРёСЂРёРЅР°";
+			this->РЁРёСЂРёРЅР°->Name = L"РЁРёСЂРёРЅР°";
+			this->РЁРёСЂРёРЅР°->ReadOnly = true;
+			this->РЁРёСЂРёРЅР°->Resizable = System::Windows::Forms::DataGridViewTriState::False;
 			// 
 			// textBox1
 			// 
@@ -254,7 +254,7 @@ namespace ooplaba4cpp {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(161, 13);
 			this->label1->TabIndex = 2;
-			this->label1->Text = L"Кол-во элементов в массиве: ";
+			this->label1->Text = L"РљРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РІ РјР°СЃСЃРёРІРµ: ";
 			// 
 			// button1
 			// 
@@ -262,7 +262,7 @@ namespace ooplaba4cpp {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(53, 23);
 			this->button1->TabIndex = 3;
-			this->button1->Text = L"Задать";
+			this->button1->Text = L"Р—Р°РґР°С‚СЊ";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
@@ -278,7 +278,7 @@ namespace ooplaba4cpp {
 			this->groupBox1->Size = System::Drawing::Size(298, 79);
 			this->groupBox1->TabIndex = 4;
 			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Объём и площадь";
+			this->groupBox1->Text = L"РћР±СЉС‘Рј Рё РїР»РѕС‰Р°РґСЊ";
 			// 
 			// label4
 			// 
@@ -302,7 +302,7 @@ namespace ooplaba4cpp {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 2;
-			this->button2->Text = L"Узнать";
+			this->button2->Text = L"РЈР·РЅР°С‚СЊ";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
@@ -321,7 +321,7 @@ namespace ooplaba4cpp {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(47, 13);
 			this->label2->TabIndex = 0;
-			this->label2->Text = L"Номер: ";
+			this->label2->Text = L"РќРѕРјРµСЂ: ";
 			// 
 			// groupBox2
 			// 
@@ -346,7 +346,7 @@ namespace ooplaba4cpp {
 			this->groupBox3->Size = System::Drawing::Size(298, 71);
 			this->groupBox3->TabIndex = 6;
 			this->groupBox3->TabStop = false;
-			this->groupBox3->Text = L"Увеличение";
+			this->groupBox3->Text = L"РЈРІРµР»РёС‡РµРЅРёРµ";
 			// 
 			// textBox4
 			// 
@@ -363,7 +363,7 @@ namespace ooplaba4cpp {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(89, 13);
 			this->label6->TabIndex = 8;
-			this->label6->Text = L"Во сколько раз:";
+			this->label6->Text = L"Р’Рѕ СЃРєРѕР»СЊРєРѕ СЂР°Р·:";
 			// 
 			// button3
 			// 
@@ -371,7 +371,7 @@ namespace ooplaba4cpp {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(75, 23);
 			this->button3->TabIndex = 7;
-			this->button3->Text = L"Увеличить";
+			this->button3->Text = L"РЈРІРµР»РёС‡РёС‚СЊ";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
@@ -390,7 +390,7 @@ namespace ooplaba4cpp {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(47, 13);
 			this->label5->TabIndex = 5;
-			this->label5->Text = L"Номер: ";
+			this->label5->Text = L"РќРѕРјРµСЂ: ";
 			// 
 			// groupBox4
 			// 
@@ -405,7 +405,7 @@ namespace ooplaba4cpp {
 			this->groupBox4->Size = System::Drawing::Size(298, 74);
 			this->groupBox4->TabIndex = 7;
 			this->groupBox4->TabStop = false;
-			this->groupBox4->Text = L"Отношение объёмов";
+			this->groupBox4->Text = L"РћС‚РЅРѕС€РµРЅРёРµ РѕР±СЉС‘РјРѕРІ";
 			// 
 			// label9
 			// 
@@ -421,7 +421,7 @@ namespace ooplaba4cpp {
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(75, 23);
 			this->button4->TabIndex = 10;
-			this->button4->Text = L"Узнать";
+			this->button4->Text = L"РЈР·РЅР°С‚СЊ";
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
@@ -440,7 +440,7 @@ namespace ooplaba4cpp {
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(53, 13);
 			this->label8->TabIndex = 12;
-			this->label8->Text = L"Номер2: ";
+			this->label8->Text = L"РќРѕРјРµСЂ2: ";
 			// 
 			// textBox5
 			// 
@@ -457,7 +457,7 @@ namespace ooplaba4cpp {
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(53, 13);
 			this->label7->TabIndex = 10;
-			this->label7->Text = L"Номер1: ";
+			this->label7->Text = L"РќРѕРјРµСЂ1: ";
 			// 
 			// groupBox5
 			// 
@@ -472,7 +472,7 @@ namespace ooplaba4cpp {
 			this->groupBox5->Size = System::Drawing::Size(298, 74);
 			this->groupBox5->TabIndex = 15;
 			this->groupBox5->TabStop = false;
-			this->groupBox5->Text = L"Сравнение объёмов";
+			this->groupBox5->Text = L"РЎСЂР°РІРЅРµРЅРёРµ РѕР±СЉС‘РјРѕРІ";
 			// 
 			// label10
 			// 
@@ -488,7 +488,7 @@ namespace ooplaba4cpp {
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(75, 23);
 			this->button5->TabIndex = 10;
-			this->button5->Text = L"Узнать";
+			this->button5->Text = L"РЈР·РЅР°С‚СЊ";
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
@@ -507,7 +507,7 @@ namespace ooplaba4cpp {
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(53, 13);
 			this->label11->TabIndex = 12;
-			this->label11->Text = L"Номер2: ";
+			this->label11->Text = L"РќРѕРјРµСЂ2: ";
 			// 
 			// textBox8
 			// 
@@ -524,7 +524,7 @@ namespace ooplaba4cpp {
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(53, 13);
 			this->label12->TabIndex = 10;
-			this->label12->Text = L"Номер1: ";
+			this->label12->Text = L"РќРѕРјРµСЂ1: ";
 			// 
 			// groupBox6
 			// 
@@ -540,7 +540,7 @@ namespace ooplaba4cpp {
 			this->groupBox6->Size = System::Drawing::Size(298, 156);
 			this->groupBox6->TabIndex = 16;
 			this->groupBox6->TabStop = false;
-			this->groupBox6->Text = L"Смена типа";
+			this->groupBox6->Text = L"РЎРјРµРЅР° С‚РёРїР°";
 			// 
 			// button6
 			// 
@@ -548,7 +548,7 @@ namespace ooplaba4cpp {
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(75, 23);
 			this->button6->TabIndex = 15;
-			this->button6->Text = L"Изменить";
+			this->button6->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
 			// 
@@ -559,7 +559,7 @@ namespace ooplaba4cpp {
 			this->radioButton4->Name = L"radioButton4";
 			this->radioButton4->Size = System::Drawing::Size(77, 17);
 			this->radioButton4->TabIndex = 15;
-			this->radioButton4->Text = L"Пирамида";
+			this->radioButton4->Text = L"РџРёСЂР°РјРёРґР°";
 			this->radioButton4->UseVisualStyleBackColor = true;
 			// 
 			// radioButton3
@@ -569,7 +569,7 @@ namespace ooplaba4cpp {
 			this->radioButton3->Name = L"radioButton3";
 			this->radioButton3->Size = System::Drawing::Size(55, 17);
 			this->radioButton3->TabIndex = 14;
-			this->radioButton3->Text = L"Конус";
+			this->radioButton3->Text = L"РљРѕРЅСѓСЃ";
 			this->radioButton3->UseVisualStyleBackColor = true;
 			// 
 			// radioButton2
@@ -579,7 +579,7 @@ namespace ooplaba4cpp {
 			this->radioButton2->Name = L"radioButton2";
 			this->radioButton2->Size = System::Drawing::Size(69, 17);
 			this->radioButton2->TabIndex = 13;
-			this->radioButton2->Text = L"Цилиндр";
+			this->radioButton2->Text = L"Р¦РёР»РёРЅРґСЂ";
 			this->radioButton2->UseVisualStyleBackColor = true;
 			// 
 			// radioButton1
@@ -591,7 +591,7 @@ namespace ooplaba4cpp {
 			this->radioButton1->Size = System::Drawing::Size(111, 17);
 			this->radioButton1->TabIndex = 12;
 			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Параллелепипед";
+			this->radioButton1->Text = L"РџР°СЂР°Р»Р»РµР»РµРїРёРїРµРґ";
 			this->radioButton1->UseVisualStyleBackColor = true;
 			// 
 			// textBox9
@@ -609,7 +609,7 @@ namespace ooplaba4cpp {
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(47, 13);
 			this->label13->TabIndex = 10;
-			this->label13->Text = L"Номер: ";
+			this->label13->Text = L"РќРѕРјРµСЂ: ";
 			// 
 			// groupBox7
 			// 
@@ -626,7 +626,7 @@ namespace ooplaba4cpp {
 			this->groupBox7->Size = System::Drawing::Size(407, 140);
 			this->groupBox7->TabIndex = 17;
 			this->groupBox7->TabStop = false;
-			this->groupBox7->Text = L"Изменение параметров";
+			this->groupBox7->Text = L"РР·РјРµРЅРµРЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ";
 			// 
 			// label15
 			// 
@@ -635,7 +635,7 @@ namespace ooplaba4cpp {
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(58, 13);
 			this->label15->TabIndex = 22;
-			this->label15->Text = L"Значение:";
+			this->label15->Text = L"Р—РЅР°С‡РµРЅРёРµ:";
 			// 
 			// textBox11
 			// 
@@ -652,7 +652,7 @@ namespace ooplaba4cpp {
 			this->radioButton7->Size = System::Drawing::Size(64, 17);
 			this->radioButton7->TabIndex = 20;
 			this->radioButton7->TabStop = true;
-			this->radioButton7->Text = L"Ширина";
+			this->radioButton7->Text = L"РЁРёСЂРёРЅР°";
 			this->radioButton7->UseVisualStyleBackColor = true;
 			// 
 			// radioButton6
@@ -664,7 +664,7 @@ namespace ooplaba4cpp {
 			this->radioButton6->Size = System::Drawing::Size(63, 17);
 			this->radioButton6->TabIndex = 19;
 			this->radioButton6->TabStop = true;
-			this->radioButton6->Text = L"Высота";
+			this->radioButton6->Text = L"Р’С‹СЃРѕС‚Р°";
 			this->radioButton6->UseVisualStyleBackColor = true;
 			// 
 			// radioButton5
@@ -675,7 +675,7 @@ namespace ooplaba4cpp {
 			this->radioButton5->Size = System::Drawing::Size(58, 17);
 			this->radioButton5->TabIndex = 18;
 			this->radioButton5->TabStop = true;
-			this->radioButton5->Text = L"Длина";
+			this->radioButton5->Text = L"Р”Р»РёРЅР°";
 			this->radioButton5->UseVisualStyleBackColor = true;
 			// 
 			// button7
@@ -684,7 +684,7 @@ namespace ooplaba4cpp {
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(75, 23);
 			this->button7->TabIndex = 16;
-			this->button7->Text = L"Изменить";
+			this->button7->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button7->UseVisualStyleBackColor = true;
 			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			// 
@@ -704,7 +704,7 @@ namespace ooplaba4cpp {
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(47, 13);
 			this->label14->TabIndex = 16;
-			this->label14->Text = L"Номер: ";
+			this->label14->Text = L"РќРѕРјРµСЂ: ";
 			// 
 			// MyForm
 			// 
@@ -720,7 +720,7 @@ namespace ooplaba4cpp {
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->dataGridView1);
 			this->Name = L"MyForm";
-			this->Text = L"Бажин Дмитрий, ООП Лаба 4";
+			this->Text = L"Р‘Р°Р¶РёРЅ Р”РјРёС‚СЂРёР№, РћРћРџ Р›Р°Р±Р° 4";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
@@ -742,17 +742,17 @@ namespace ooplaba4cpp {
 #pragma endregion
 
 	private: void UpdateGrid() {
-		//номер тип длина высота ширина
+		//РЅРѕРјРµСЂ С‚РёРї РґР»РёРЅР° РІС‹СЃРѕС‚Р° С€РёСЂРёРЅР°
 		dataGridView1->Rows->Clear();
-		for (int i = 0; i < КоличествоЭлементов; i++) {
+		for (int i = 0; i < РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ; i++) {
 			array<String^>^ row0 = gcnew array<String^>(5);
 			row0[0] = Convert::ToString(i);
-			row0[1] = Marshal::PtrToStringAnsi((IntPtr)(char*)МассивФигур[i]->Тип());
+			row0[1] = Marshal::PtrToStringAnsi((IntPtr)(char*)РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->РўРёРї());
 			row0[2] = "0";
-			row0[3] = Convert::ToString(МассивФигур[i]->ВернутьВысоту());
-			row0[4] = Convert::ToString(МассивФигур[i]->ВернутьШирину());
-			if (row0[1] == "Параллелепипед" || row0[1] == "Пирамида") {
-				row0[2] = Convert::ToString(МассивФигур[i]->ВернутьДлину());
+			row0[3] = Convert::ToString(РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->Р’РµСЂРЅСѓС‚СЊР’С‹СЃРѕС‚Сѓ());
+			row0[4] = Convert::ToString(РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->Р’РµСЂРЅСѓС‚СЊРЁРёСЂРёРЅСѓ());
+			if (row0[1] == "РџР°СЂР°Р»Р»РµР»РµРїРёРїРµРґ" || row0[1] == "РџРёСЂР°РјРёРґР°") {
+				row0[2] = Convert::ToString(РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->Р’РµСЂРЅСѓС‚СЊР”Р»РёРЅСѓ());
 			}
 			dataGridView1->Rows->Add(row0);
 		}
@@ -760,20 +760,20 @@ namespace ooplaba4cpp {
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		КоличествоЭлементов = Convert::ToInt32(textBox1->Text);
-		МассивФигур = new _3DShape * [КоличествоЭлементов];
-		for (int i = 0; i < КоличествоЭлементов; i++) {
+		РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ = Convert::ToInt32(textBox1->Text);
+		РњР°СЃСЃРёРІР¤РёРіСѓСЂ = new _3DShape * [РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ];
+		for (int i = 0; i < РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ; i++) {
 			if (i % 4 == 0) {
-				МассивФигур[i] = new Параллелепипед(мойРандом(), мойРандом(), мойРандом());
+				РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] = new РџР°СЂР°Р»Р»РµР»РµРїРёРїРµРґ(РјРѕР№Р Р°РЅРґРѕРј(), РјРѕР№Р Р°РЅРґРѕРј(), РјРѕР№Р Р°РЅРґРѕРј());
 			}
 			if (i % 4 == 1) {
-				МассивФигур[i] = new Цилиндр(мойРандом(), мойРандом(), мойРандом());
+				РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] = new Р¦РёР»РёРЅРґСЂ(РјРѕР№Р Р°РЅРґРѕРј(), РјРѕР№Р Р°РЅРґРѕРј(), РјРѕР№Р Р°РЅРґРѕРј());
 			}
 			if (i % 4 == 2) {
-				МассивФигур[i] = new Конус(мойРандом(), мойРандом(), мойРандом());
+				РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] = new РљРѕРЅСѓСЃ(РјРѕР№Р Р°РЅРґРѕРј(), РјРѕР№Р Р°РЅРґРѕРј(), РјРѕР№Р Р°РЅРґРѕРј());
 			}
 			if (i % 4 == 3) {
-				МассивФигур[i] = new Пирамида(мойРандом(), мойРандом(), мойРандом());
+				РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] = new РџРёСЂР°РјРёРґР°(РјРѕР№Р Р°РЅРґРѕРј(), РјРѕР№Р Р°РЅРґРѕРј(), РјРѕР№Р Р°РЅРґРѕРј());
 			}
 		}
 		UpdateGrid();
@@ -781,17 +781,17 @@ namespace ooplaba4cpp {
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		int i = Convert::ToInt32(textBox2->Text);
 		if (i < 0) { i = 0; textBox2->Text = "0"; }
-		if (i > КоличествоЭлементов-1) { i = 0; textBox2->Text = "0"; }
-		label3->Text = "Площадь: " + МассивФигур[i]->Площадь();
-		label4->Text = "Объём: " + МассивФигур[i]->Объём();
+		if (i > РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ-1) { i = 0; textBox2->Text = "0"; }
+		label3->Text = "РџР»РѕС‰Р°РґСЊ: " + РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->РџР»РѕС‰Р°РґСЊ();
+		label4->Text = "РћР±СЉС‘Рј: " + РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->РћР±СЉС‘Рј();
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		int i = Convert::ToInt32(textBox3->Text);
 		double k = Convert::ToDouble(textBox4->Text->Replace('.',','));
 		if (i < 0) { i = 0; textBox3->Text = "0"; }
-		if (i > КоличествоЭлементов - 1) { i = 0; textBox3->Text = "0"; }
+		if (i > РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ - 1) { i = 0; textBox3->Text = "0"; }
 		if (k <= 0.0) { k = 1; textBox4->Text = "1"; }
-		*МассивФигур[i] *= k;
+		*РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] *= k;
 		UpdateGrid();
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -799,46 +799,46 @@ namespace ooplaba4cpp {
 		int j = Convert::ToInt32(textBox6->Text);
 		if (i < 0) { i = 0; textBox5->Text = "0"; }
 		if (j < 0) { j = 0; textBox6->Text = "0"; }
-		if (i > КоличествоЭлементов - 1) { i = 0; textBox5->Text = "0"; }
-		if (j > КоличествоЭлементов - 1) { j = 0; textBox6->Text = "0"; }
-		label9->Text = "Отношение объёмов: " + *МассивФигур[i] / *МассивФигур[j];
+		if (i > РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ - 1) { i = 0; textBox5->Text = "0"; }
+		if (j > РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ - 1) { j = 0; textBox6->Text = "0"; }
+		label9->Text = "РћС‚РЅРѕС€РµРЅРёРµ РѕР±СЉС‘РјРѕРІ: " + *РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] / *РњР°СЃСЃРёРІР¤РёРіСѓСЂ[j];
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 		int i = Convert::ToInt32(textBox8->Text);
 		int j = Convert::ToInt32(textBox7->Text);
 		if (i < 0) { i = 0; textBox8->Text = "0"; }
 		if (j < 0) { j = 0; textBox7->Text = "0"; }
-		if (i > КоличествоЭлементов - 1) { i = 0; textBox8->Text = "0"; }
-		if (j > КоличествоЭлементов - 1) { j = 0; textBox7->Text = "0"; }
-		if (МассивФигур[i] == МассивФигур[j]) {
-			label10->Text = "Объём 1 == Объём 2";
+		if (i > РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ - 1) { i = 0; textBox8->Text = "0"; }
+		if (j > РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ - 1) { j = 0; textBox7->Text = "0"; }
+		if (РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] == РњР°СЃСЃРёРІР¤РёРіСѓСЂ[j]) {
+			label10->Text = "РћР±СЉС‘Рј 1 == РћР±СЉС‘Рј 2";
 		}
-		if (МассивФигур[i] > МассивФигур[j]) {
-			label10->Text = "Объём 1 > Объём 2";
+		if (РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] > РњР°СЃСЃРёРІР¤РёРіСѓСЂ[j]) {
+			label10->Text = "РћР±СЉС‘Рј 1 > РћР±СЉС‘Рј 2";
 		}
-		if (МассивФигур[i] < МассивФигур[j]) {
-			label10->Text = "Объём 1 < Объём 2";
+		if (РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] < РњР°СЃСЃРёРІР¤РёРіСѓСЂ[j]) {
+			label10->Text = "РћР±СЉС‘Рј 1 < РћР±СЉС‘Рј 2";
 		}
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 		int i = Convert::ToInt32(textBox9->Text);
 		if (i < 0) { i = 0; textBox9->Text = "0"; }
-		if (i > КоличествоЭлементов - 1) { i = 0; textBox9->Text = "0"; }
-		float tmp1 = МассивФигур[i]->ВернутьВысоту();
-		float tmp2 = МассивФигур[i]->ВернутьДлину();
-		float tmp3 = МассивФигур[i]->ВернутьШирину();
-		delete[] МассивФигур[i];
+		if (i > РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ - 1) { i = 0; textBox9->Text = "0"; }
+		float tmp1 = РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->Р’РµСЂРЅСѓС‚СЊР’С‹СЃРѕС‚Сѓ();
+		float tmp2 = РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->Р’РµСЂРЅСѓС‚СЊР”Р»РёРЅСѓ();
+		float tmp3 = РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->Р’РµСЂРЅСѓС‚СЊРЁРёСЂРёРЅСѓ();
+		delete[] РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i];
 		if (radioButton1->Checked){
-			МассивФигур[i] = new Параллелепипед(tmp1, tmp2, tmp3);
+			РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] = new РџР°СЂР°Р»Р»РµР»РµРїРёРїРµРґ(tmp1, tmp2, tmp3);
 		}
 		if (radioButton2->Checked) {
-			МассивФигур[i] = new Цилиндр(tmp1, tmp2, tmp3);
+			РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] = new Р¦РёР»РёРЅРґСЂ(tmp1, tmp2, tmp3);
 		}
 		if (radioButton3->Checked) {
-			МассивФигур[i] = new Конус(tmp1, tmp2, tmp3);
+			РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] = new РљРѕРЅСѓСЃ(tmp1, tmp2, tmp3);
 		}
 		if (radioButton4->Checked) {
-			МассивФигур[i] = new Пирамида(tmp1, tmp2, tmp3);
+			РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i] = new РџРёСЂР°РјРёРґР°(tmp1, tmp2, tmp3);
 		}
 		UpdateGrid();
 	}
@@ -847,9 +847,9 @@ namespace ooplaba4cpp {
 		if (ttt == "") { ttt = "0"; }
 		int i = Convert::ToInt32(ttt);
 		if (i < 0) { i = 0; textBox10->Text = "0"; }
-		if (i > КоличествоЭлементов - 1) { i = 0; textBox10->Text = "0"; }
-		String^ type = Marshal::PtrToStringAnsi((IntPtr)(char*)МассивФигур[i]->Тип());
-		if (type == "Параллелепипед" || type == "Пирамида") {
+		if (i > РљРѕР»РёС‡РµСЃС‚РІРѕР­Р»РµРјРµРЅС‚РѕРІ - 1) { i = 0; textBox10->Text = "0"; }
+		String^ type = Marshal::PtrToStringAnsi((IntPtr)(char*)РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->РўРёРї());
+		if (type == "РџР°СЂР°Р»Р»РµР»РµРїРёРїРµРґ" || type == "РџРёСЂР°РјРёРґР°") {
 			radioButton5->Visible = true;
 		}
 		else {
@@ -865,13 +865,13 @@ namespace ooplaba4cpp {
 		if (newParam < 0) { newParam = -newParam; }
 		if (newParam == 0) { newParam = 1; }
 		if (radioButton5->Checked) {
-			МассивФигур[i]->ЗадатьДлину(newParam);
+			РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->Р—Р°РґР°С‚СЊР”Р»РёРЅСѓ(newParam);
 		}
 		if (radioButton6->Checked) {
-			МассивФигур[i]->ЗадатьВысоту(newParam);
+			РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->Р—Р°РґР°С‚СЊР’С‹СЃРѕС‚Сѓ(newParam);
 		}
 		if (radioButton7->Checked) {
-			МассивФигур[i]->ЗадатьШирину(newParam);
+			РњР°СЃСЃРёРІР¤РёРіСѓСЂ[i]->Р—Р°РґР°С‚СЊРЁРёСЂРёРЅСѓ(newParam);
 		}
 		UpdateGrid();
 	}

@@ -1,24 +1,24 @@
 #pragma once
 
-//íóæåí ïàðàëëåëåïèïåä, öèëèíäð, êîíóñ, ïèðàìèäà
-//îáùèå äëèíà, øèðèíà(øèðèíà/2 = ðàäèóñ), âûñîòà
+//Ð½ÑƒÐ¶ÐµÐ½ Ð¿Ð°Ñ€Ð°Ð»Ð»ÐµÐ»ÐµÐ¿Ð¸Ð¿ÐµÐ´, Ñ†Ð¸Ð»Ð¸Ð½Ð´Ñ€, ÐºÐ¾Ð½ÑƒÑ, Ð¿Ð¸Ñ€Ð°Ð¼Ð¸Ð´Ð°
+//Ð¾Ð±Ñ‰Ð¸Ðµ Ð´Ð»Ð¸Ð½Ð°, ÑˆÐ¸Ñ€Ð¸Ð½Ð°(ÑˆÐ¸Ñ€Ð¸Ð½Ð°/2 = Ñ€Ð°Ð´Ð¸ÑƒÑ), Ð²Ñ‹ÑÐ¾Ñ‚Ð°
 
 class _3DShape
 {
 protected:
-	float äëèíà = 0, øèðèíà = 0, âûñîòà = 0;
+	float Ð´Ð»Ð¸Ð½Ð° = 0, ÑˆÐ¸Ñ€Ð¸Ð½Ð° = 0, Ð²Ñ‹ÑÐ¾Ñ‚Ð° = 0;
 public:
-	_3DShape(float Äëèíà, float Øèðèíà, float Âûñîòà);
+	_3DShape(float Ð”Ð»Ð¸Ð½Ð°, float Ð¨Ð¸Ñ€Ð¸Ð½Ð°, float Ð’Ñ‹ÑÐ¾Ñ‚Ð°);
 	_3DShape();
-	void ÇàäàòüÄëèíó(float x);
-	void ÇàäàòüØèðèíó(float x);
-	void ÇàäàòüÂûñîòó(float x);
-	float ÂåðíóòüÄëèíó();
-	float ÂåðíóòüØèðèíó();
-	float ÂåðíóòüÂûñîòó();
-	virtual float Îáú¸ì() = 0;
-	virtual float Ïëîùàäü() = 0;
-	virtual const char* Òèï() = 0;
+	void Ð—Ð°Ð´Ð°Ñ‚ÑŒÐ”Ð»Ð¸Ð½Ñƒ(float x);
+	void Ð—Ð°Ð´Ð°Ñ‚ÑŒÐ¨Ð¸Ñ€Ð¸Ð½Ñƒ(float x);
+	void Ð—Ð°Ð´Ð°Ñ‚ÑŒÐ’Ñ‹ÑÐ¾Ñ‚Ñƒ(float x);
+	float Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÐ”Ð»Ð¸Ð½Ñƒ();
+	float Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÐ¨Ð¸Ñ€Ð¸Ð½Ñƒ();
+	float Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÐ’Ñ‹ÑÐ¾Ñ‚Ñƒ();
+	virtual float ÐžÐ±ÑŠÑ‘Ð¼() = 0;
+	virtual float ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ() = 0;
+	virtual const char* Ð¢Ð¸Ð¿() = 0;
 	virtual void operator*=(float k) = 0;
 	float operator/(_3DShape& Shape1);
 	bool operator>(_3DShape& Shape1);

@@ -1,13 +1,13 @@
 #pragma once
 #include "_3DShape.h"
-class Параллелепипед :
+class РџР°СЂР°Р»Р»РµР»РµРїРёРїРµРґ :
 	public _3DShape
 {
 public:
-	Параллелепипед();
-	Параллелепипед(float Длина, float Ширина, float Высота);
-	float Объём();
-	float Площадь();
-	const char* Тип();
+	РџР°СЂР°Р»Р»РµР»РµРїРёРїРµРґ();
+	РџР°СЂР°Р»Р»РµР»РµРїРёРїРµРґ(float Р”Р»РёРЅР°, float РЁРёСЂРёРЅР°, float Р’С‹СЃРѕС‚Р°);
+	float РћР±СЉС‘Рј();
+	float РџР»РѕС‰Р°РґСЊ();
+	const char* РўРёРї();
 	void operator*=(float k);
 };

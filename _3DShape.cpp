@@ -1,42 +1,42 @@
 #include "_3DShape.h"
 
-_3DShape::_3DShape(float ƒÎËÌ‡, float ÿËËÌ‡, float ¬˚ÒÓÚ‡) {
-	‰ÎËÌ‡ = ƒÎËÌ‡;
-	¯ËËÌ‡ = ÿËËÌ‡;
-	‚˚ÒÓÚ‡ = ¬˚ÒÓÚ‡;
+_3DShape::_3DShape(float –î–ª–∏–Ω–∞, float –®–∏—Ä–∏–Ω–∞, float –í—ã—Å–æ—Ç–∞) {
+	–¥–ª–∏–Ω–∞ = –î–ª–∏–Ω–∞;
+	—à–∏—Ä–∏–Ω–∞ = –®–∏—Ä–∏–Ω–∞;
+	–≤—ã—Å–æ—Ç–∞ = –í—ã—Å–æ—Ç–∞;
 }
 _3DShape::_3DShape() {
-	‰ÎËÌ‡ = 0;
-	¯ËËÌ‡ = 0;
-	‚˚ÒÓÚ‡ = 0;
+	–¥–ª–∏–Ω–∞ = 0;
+	—à–∏—Ä–∏–Ω–∞ = 0;
+	–≤—ã—Å–æ—Ç–∞ = 0;
 }
-void _3DShape::«‡‰‡Ú¸ƒÎËÌÛ(float x) {
-	‰ÎËÌ‡ = x;
+void _3DShape::–ó–∞–¥–∞—Ç—å–î–ª–∏–Ω—É(float x) {
+	–¥–ª–∏–Ω–∞ = x;
 }
-void _3DShape::«‡‰‡Ú¸ÿËËÌÛ(float x) {
-	¯ËËÌ‡ = x;
+void _3DShape::–ó–∞–¥–∞—Ç—å–®–∏—Ä–∏–Ω—É(float x) {
+	—à–∏—Ä–∏–Ω–∞ = x;
 }
-void _3DShape::«‡‰‡Ú¸¬˚ÒÓÚÛ(float x) {
-	‚˚ÒÓÚ‡ = x;
+void _3DShape::–ó–∞–¥–∞—Ç—å–í—ã—Å–æ—Ç—É(float x) {
+	–≤—ã—Å–æ—Ç–∞ = x;
 }
-float _3DShape::¬ÂÌÛÚ¸ƒÎËÌÛ() {
-	return ‰ÎËÌ‡;
+float _3DShape::–í–µ—Ä–Ω—É—Ç—å–î–ª–∏–Ω—É() {
+	return –¥–ª–∏–Ω–∞;
 }
-float _3DShape::¬ÂÌÛÚ¸ÿËËÌÛ() {
-	return ¯ËËÌ‡;
+float _3DShape::–í–µ—Ä–Ω—É—Ç—å–®–∏—Ä–∏–Ω—É() {
+	return —à–∏—Ä–∏–Ω–∞;
 }
-float _3DShape::¬ÂÌÛÚ¸¬˚ÒÓÚÛ() {
-	return ‚˚ÒÓÚ‡;
+float _3DShape::–í–µ—Ä–Ω—É—Ç—å–í—ã—Å–æ—Ç—É() {
+	return –≤—ã—Å–æ—Ç–∞;
 }
 float _3DShape::operator/(_3DShape& Shape1) {
-	return Œ·˙∏Ï() / Shape1.Œ·˙∏Ï();
+	return –û–±—ä—ë–º() / Shape1.–û–±—ä—ë–º();
 }
 bool _3DShape::operator>(_3DShape& Shape1) {
-	return Œ·˙∏Ï() > Shape1.Œ·˙∏Ï();
+	return –û–±—ä—ë–º() > Shape1.–û–±—ä—ë–º();
 }
 bool _3DShape::operator<(_3DShape& Shape1) {
-	return Œ·˙∏Ï() < Shape1.Œ·˙∏Ï();
+	return –û–±—ä—ë–º() < Shape1.–û–±—ä—ë–º();
 }
 bool _3DShape::operator==(_3DShape& Shape1) {
-	return Œ·˙∏Ï() == Shape1.Œ·˙∏Ï();
+	return –û–±—ä—ë–º() == Shape1.–û–±—ä—ë–º();
 }

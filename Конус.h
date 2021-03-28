@@ -1,14 +1,14 @@
 #pragma once
 #include "_3DShape.h"
-class Конус :
+class РљРѕРЅСѓСЃ :
 	public _3DShape
 {
 public:
-	Конус();
-	Конус(float Ширина, float Высота, float drop);
-	float Объём();
-	float Площадь();
-	const char* Тип();
+	РљРѕРЅСѓСЃ();
+	РљРѕРЅСѓСЃ(float РЁРёСЂРёРЅР°, float Р’С‹СЃРѕС‚Р°, float drop);
+	float РћР±СЉС‘Рј();
+	float РџР»РѕС‰Р°РґСЊ();
+	const char* РўРёРї();
 	void operator*=(float k);
 };
 
