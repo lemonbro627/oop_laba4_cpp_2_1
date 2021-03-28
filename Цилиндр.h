@@ -1,14 +1,14 @@
 #pragma once
 #include "_3DShape.h"
-class Р¦РёР»РёРЅРґСЂ :
+class Цилиндр :
 	public _3DShape
 {
 public:
-	Р¦РёР»РёРЅРґСЂ();
-	Р¦РёР»РёРЅРґСЂ(float РЁРёСЂРёРЅР°, float Р’С‹СЃРѕС‚Р°, float drop);
-	float РћР±СЉС‘Рј();
-	float РџР»РѕС‰Р°РґСЊ();
-	const char* РўРёРї();
+	Цилиндр();
+	Цилиндр(float Ширина, float Высота, float drop);
+	float Объём();
+	float Площадь();
+	const char* Тип();
 	void operator*=(float k);
 };
 
