@@ -246,6 +246,8 @@ namespace ooplaba4cpp {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(51, 20);
 			this->textBox1->TabIndex = 1;
+			this->textBox1->Text = L"0";
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
 			// 
 			// label1
 			// 
@@ -760,7 +762,9 @@ namespace ooplaba4cpp {
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		КоличествоЭлементов = Convert::ToInt32(textBox1->Text);
+		String^ ttt = textBox1->Text;
+		if (ttt == "") { ttt = "0"; }
+		КоличествоЭлементов = Convert::ToInt32(ttt);
 		МассивФигур = new _3DShape * [КоличествоЭлементов];
 		for (int i = 0; i < КоличествоЭлементов; i++) {
 			if (i % 4 == 0) {
@@ -875,5 +879,7 @@ namespace ooplaba4cpp {
 		}
 		UpdateGrid();
 	}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
